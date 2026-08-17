@@ -1,0 +1,35 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+
+project:
+  id: company-bankruptcy-prediction
+  title: Predicción de Bancarrota Empresarial
+  description: Análisis de datos y modelos de Machine Learning para predecir bancarrota en empresas
+  keywords:
+    - machine learning
+    - bankruptcy prediction
+    - data visualization
+  authors:
+    - name: Laura Rivera
+      affiliations:
+        - Universidad del Norte
+    - name: Natalý Cárdenas
+      affiliations:
+        - Universidad del Norte
+  toc:
+    - file: index.md
+    - file: EDA_Prediccion_Quiebra_Taiwan.ipynb
+
+site:
+  template: book-theme
+  options:
+    logo: images/logo.png
+    logo_dark: images/logo-dark.png
+    favicon: images/favicon.ico
+    primary_sidebar_collapsed: false
+    secondary_sidebar_max_depth: 2
+    show_toc_level: 2
+    style: style/custom.css
+  nav:
+    - title: Repositorio
+      url: https://github.com/lauraformore/Predicci-n-de-Bancarrota-Empresarial
