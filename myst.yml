@@ -18,7 +18,8 @@ project:
         - Universidad del Norte
   toc:
     - file: index.md
-    - file: EDA_Prediccion_Quiebra_Taiwan.ipynb
+    - file: EDA.ipynb
+    - file: PREPROCESAMIENTO.ipynb
 
 site:
   template: book-theme
