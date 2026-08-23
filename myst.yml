@@ -3,19 +3,32 @@ version: 1
 
 project:
   id: company-bankruptcy-prediction
-  title: Predicción de Bancarrota Empresarial
+  title: "Modelo de Clasificación Binaria para la Predicción de Bancarrota Empresarial a partir de Estados Financieros: Dataset Taiwan Economic Journal"
   description: Análisis de datos y modelos de Machine Learning para predecir bancarrota en empresas
   keywords:
     - machine learning
     - bankruptcy prediction
     - data visualization
-  authors:
-    - name: Laura Rivera
-      affiliations:
-        - Universidad del Norte
-    - name: Natalý Cárdenas
-      affiliations:
-        - Universidad del Norte
+
+authors:
+  - name: Laura Rivera
+    corresponding: true
+    email: laurarivera@uninorte.edu.co
+    affiliations:
+      - id: unorte
+        institution: Universidad del Norte
+        department: Departamento de Matemáticas, Física y Ciencia de Datos
+        city: Barranquilla
+        country: Colombia
+  - name: Natalý Cárdenas
+    corresponding: true
+    email: ncardenas@uninorte.edu.co
+    affiliations:
+      - id: uniorte
+        institution: Universidad del Norte
+        department: Departamento de Matemáticas, Física y Ciencia de Datos
+        city: Barranquilla
+        country: Colombia
   toc:
     - file: index.md
     - file: EDA.ipynb

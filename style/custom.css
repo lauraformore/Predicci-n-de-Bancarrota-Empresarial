@@ -1,36 +1,39 @@
 /* ============================================================
    Predicción de Bancarrota Empresarial — Tema Adapta-Theme
-   Paleta: #1B4F72 (Principal) | #2980B9 (Acento) | #E4572E (Riesgo)
+   Paleta: Space Indigo #392F5A | Pearl Aqua #9DD9D2 | Princeton Orange #FF8811
+           Jasmine #F4D06F | Floral White #FFF8F0
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 /* ---------- 1. VARIABLES MODO CLARO (DEFAULT) ---------- */
 :root {
   /* Identidad de la Marca */
-  --brand-primary: #1B4F72;
-  --brand-accent: #2980B9;
-  --brand-risk: #E4572E;
+  --brand-primary: #392F5A;      /* Space Indigo */
+  --brand-accent: #3C8C86;       /* Pearl Aqua oscurecido — legible como texto/enlace */
+  --brand-accent-soft: #9DD9D2;  /* Pearl Aqua puro — solo fondos, bordes, dark mode */
+  --brand-risk: #FF8811;         /* Princeton Orange */
+  --brand-highlight: #F4D06F;    /* Jasmine — tinte de fondo, nunca texto */
 
-  /* Color "vivo" que SÍ cambia según el tema (úsalo en vez de --brand-primary
-     para cualquier texto/ícono que deba adaptarse a modo oscuro) */
+  /* Color "vivo" que SÍ cambia según el tema */
   --myst-color-primary: var(--brand-primary);
-  --myst-color-primary-light: #EBF5FB;
+  --myst-color-primary-light: #EDEAF4;
 
   /* Colores de Interfaz (Light Mode) */
-  --bg-surface: #FFFFFF;
-  --bg-surface-muted: #F4F8FB;
-  --bg-code: #0F1C26;
-  --color-text-main: #2C3E50;
-  --color-text-muted: #566573;
-  --color-border: rgba(27, 79, 114, 0.15);
+  --bg-surface: #FFFDF9;
+  --bg-surface-muted: #F7F1E4;
+  --bg-code: #211C33;
+  --color-text-main: #2E2A3D;
+  --color-text-muted: #6B6577;
+  --color-border: rgba(57, 47, 90, 0.15);
 
   /* Tipografías */
   --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
   /* Sombras */
-  --shadow-soft: 0 2px 12px rgba(27, 79, 114, 0.08);
+  --shadow-soft: 0 2px 12px rgba(57, 47, 90, 0.08);
 }
 
 /* ---------- 2. VARIABLES MODO OSCURO ----------
@@ -40,18 +43,19 @@
 body[data-theme="dark"],
 html[data-theme="dark"],
 .dark {
-  --myst-color-primary: #5DADE2;
-  --myst-color-primary-light: #16233A;
+  --myst-color-primary: #9DD9D2;       /* Pearl Aqua puro brilla bien sobre fondo oscuro */
+  --myst-color-primary-light: #223047;
+  --brand-accent-soft: #9DD9D2;
 
   /* Colores de Interfaz (Dark Mode) */
-  --bg-surface: #0F172A;
-  --bg-surface-muted: #1E293B;
-  --bg-code: #090D16;
-  --color-text-main: #E2E8F0;
-  --color-text-muted: #94A3B8;
-  --color-border: rgba(255, 255, 255, 0.1);
+  --bg-surface: #1E1B2E;
+  --bg-surface-muted: #29253D;
+  --bg-code: #14111F;
+  --color-text-main: #EDEAF5;
+  --color-text-muted: #A79FC0;
+  --color-border: rgba(157, 217, 210, 0.15);
 
-  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 /* ---------- 3. BASE Y TIPOGRAFÍA ---------- */
@@ -65,21 +69,22 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--myst-color-primary) !important;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   padding-bottom: 0.6rem;
-  border-bottom: 3px solid var(--brand-accent);
+  border-bottom: 3px solid var(--brand-accent-soft);
   margin-bottom: 0.4rem;
 }
 
 h1 + p em, h1 + p strong em {
   display: block;
+  font-family: var(--font-body);
   color: var(--color-text-muted);
   font-size: 1.05rem;
   font-weight: 400;
@@ -91,7 +96,7 @@ h2 {
   font-size: 1.5rem;
   margin-top: 1.8rem;
   padding-left: 0.7rem;
-  border-left: 4px solid var(--brand-accent);
+  border-left: 4px solid var(--brand-accent-soft);
 }
 
 h3 {
@@ -132,6 +137,7 @@ div[class*="admonition"] .title {
   box-shadow: none !important;
   padding: 0 !important;
   margin: 0 0 0.5rem 0 !important;
+  font-family: var(--font-heading) !important;
   font-size: 1.05rem !important;
   font-weight: 700 !important;
   color: var(--myst-color-primary) !important;
@@ -198,8 +204,8 @@ table th {
 }
 
 body[data-theme="dark"] table th {
-  background: #1E293B;
-  color: #5DADE2;
+  background: #29253D;
+  color: #9DD9D2;
   border-bottom: 2px solid var(--color-border);
 }
 
@@ -261,9 +267,9 @@ body[data-theme="dark"] div.output_subarea pre,
 body[data-theme="dark"] .cell_output pre,
 body[data-theme="dark"] .stream,
 body[data-theme="dark"] .stream span {
-  background-color: #1E293B !important;
-  color: #F1F5F9 !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: #29253D !important;
+  color: #EDEAF5 !important;
+  border-color: rgba(157, 217, 210, 0.15) !important;
 }
 
 .cell_input pre,
@@ -279,7 +285,7 @@ main code:not(pre code),
 article code:not(pre code),
 .content code:not(pre code) {
   background: var(--bg-surface-muted);
-  color: var(--myst-color-primary);
+  color: var(--brand-accent);
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-size: 0.88em;
@@ -314,18 +320,18 @@ img {
 }
 
 ::selection {
-  background: var(--brand-accent);
-  color: #FFFFFF;
+  background: var(--brand-accent-soft);
+  color: var(--brand-primary);
 }
 
 /* Scrollbar de marca (Chrome/Edge/Safari) — se nota en tablas y outputs anchos */
 ::-webkit-scrollbar { height: 10px; width: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg-surface-muted); }
 ::-webkit-scrollbar-thumb {
-  background: var(--brand-accent);
+  background: var(--brand-accent-soft);
   border-radius: 6px;
 }
-::-webkit-scrollbar-thumb:hover { background: var(--brand-primary); }
+::-webkit-scrollbar-thumb:hover { background: var(--brand-accent); }
 
 /* ---------- 8. TARJETAS DE LA PORTADA (grid / grid-item-card) ---------- */
 .sd-card {

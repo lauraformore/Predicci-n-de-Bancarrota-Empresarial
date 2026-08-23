@@ -12,6 +12,8 @@ Visualización de Datos y Machine Learning
 :::{grid-item-card} Autoras
 :class-card: meta-card
 Laura Rivera & Natalý Cárdenas
+
+*Departamento de Matemáticas, Física y Ciencia de Datos*
 *Universidad del Norte*
 :::
 
@@ -23,7 +25,11 @@ EDA · Feature Engineering · Modelos de Clasificación
 ::::
 
 :::{important} Resumen del Proyecto
-Este estudio aplica técnicas de Machine Learning sobre un conjunto de indicadores financieros corporativos para predecir la probabilidad de insolvencia y quiebra empresarial. A través de un análisis exploratorio de datos (EDA) exhaustivo, técnicas de rebalanceo y evaluación de modelos de clasificación, se identifican las variables críticas de riesgo financiero y solvencia.
+Este proyecto desarrolla un análisis integral del riesgo de insolvencia empresarial a partir de indicadores financieros corporativos. En primer lugar, se realiza un análisis exploratorio de datos (EDA) para comprender la estructura del conjunto de datos, estudiar la distribución de las variables, identificar valores faltantes, detectar posibles sesgos y examinar las relaciones entre los indicadores de solvencia y la quiebra empresarial.
+
+Posteriormente, se prepara la información para el modelado mediante la eliminación de la variable constante `Net Income Flag` y la estandarización de las variables numéricas. Debido al desequilibrio entre las empresas solventes y las empresas en quiebra, se emplea `class_weight='balanced'`, con el objetivo de otorgar mayor importancia a la clase minoritaria y reducir el riesgo de pasar por alto casos de insolvencia.
+
+Finalmente, se entrena un modelo de clasificación y se evalúa utilizando métricas adecuadas para problemas desbalanceados, especialmente *Recall* y ROC-AUC. El propósito es identificar las variables financieras más relacionadas con el riesgo y construir una herramienta predictiva que permita detectar oportunamente empresas con mayor probabilidad de quiebra.
 :::
 
 ## Estructura del Análisis
@@ -47,11 +53,12 @@ Entrenamiento de algoritmos supervisados, optimización de hiperparámetros y ev
 Un recorrido por el análisis exploratorio de datos, la construcción de modelos predictivos y las visualizaciones clave que explican el comportamiento financiero de las empresas en riesgo.
 :::
 
+:::{seealso} Enlaces de interés
+**Enlaces de interes: **
+**Conjunto de datos**
+- [UCI Machine Learning Repository — Taiwanese Bankruptcy Prediction](https://archive.ics.uci.edu/dataset/572/taiwanese+bankruptcy+prediction)
+- [Kaggle — Company Bankruptcy Prediction](https://www.kaggle.com/datasets/fedesoriano/company-bankruptcy-prediction)
 
-**Pasos de este notebook:**
-
-1. Eliminar la variable constante (`Net Income Flag`)
-2. Estandarizar las variables numéricas
-3. Balancear las clases (`class_weight='balanced'`)
-4. Entrenar el modelo
-5. Evaluar con las métricas correctas para clases desbalanceadas
+**Repositorio del proyecto**
+- [GitHub](https://github.com/lauraformore/Predicci-n-de-Bancarrota-Empresarial)
+:::
