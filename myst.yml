@@ -9,12 +9,13 @@ project:
     - machine learning
     - bankruptcy prediction
     - data visualization
+
   authors:
     - name: Laura Rivera
       corresponding: true
       email: laurarivera@uninorte.edu.co
       affiliations:
-        - id: unorte
+        - id: uninorte
           institution: Universidad del Norte
           department: Departamento de Matemáticas, Física y Ciencia de Datos
           city: Barranquilla
@@ -23,12 +24,12 @@ project:
       corresponding: true
       email: ncardenas@uninorte.edu.co
       affiliations:
-        - unorte
+        - uninorte
   toc:
     - file: index.md
     - file: EDA.ipynb
     - file: PREPROCESAMIENTO.ipynb
-
+    
 site:
   template: book-theme
   options:
