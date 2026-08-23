@@ -46,3 +46,12 @@ Entrenamiento de algoritmos supervisados, optimización de hiperparámetros y ev
 :::{tip} ¿Qué encontrarás aquí?
 Un recorrido por el análisis exploratorio de datos, la construcción de modelos predictivos y las visualizaciones clave que explican el comportamiento financiero de las empresas en riesgo.
 :::
+
+
+**Pasos de este notebook:**
+
+1. Eliminar la variable constante (`Net Income Flag`)
+2. Estandarizar las variables numéricas
+3. Balancear las clases (`class_weight='balanced'`)
+4. Entrenar el modelo
+5. Evaluar con las métricas correctas para clases desbalanceadas
